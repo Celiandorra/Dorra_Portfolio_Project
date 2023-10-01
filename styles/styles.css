@@ -12,50 +12,51 @@ body {
   position: relative
 }
 
-/*.scrollHalf__grupo { opacity: calc(1/(1+(var(--visible-y)*var(--visible-y)*var(--visible-y)*var(--visible-y)))); transition: all 200ms ease-in-out;}*/
+/*.scrollHalf__group { opacity: calc(1/(1+(var(--visible-y)*var(--visible-y)*var(--visible-y)*var(--visible-y)))); transition: all 200ms ease-in-out;}*/
 
 
-.scrollHalf__grupo {
+.scrollHalf__group {
   transition: all 200ms ease-in-out;
 }
 
-.scrollHalf__grupo__imagen {
+.scrollHalf__group__image {
   overflow: hidden;
 }
 
-.scrollHalf__grupo__contenido {
+.scrollHalf__group__content {
   padding: 3rem;
 }
 
 
-.scrollHalf__grupo[data-scroll="out"] {
+.scrollHalf__group[data-scroll="out"] {
   opacity: 0;
 }
 
-.scrollHalf__grupo[data-scroll="in"] {
+.scrollHalf__group[data-scroll="in"] {
   opacity: calc(var(--visible-y)*1.9);
 }
 
 
 @media screen and (min-width:50px) {
-  .scrollHalf__grupo {
-    min-height: 10vh;
+  .scrollHalf__group {
+    min-height: 100vh;
   }
 
-  .scrollHalf__grupo__imagen {
+  .scrollHalf__group__image {
     position: fixed;
     top: 0;
     left: 0;
     width: 30vw;
   }
 
-  .scrollHalf__grupo__imagen img {
+  .scrollHalf__group__image img {
     min-height: 100vh;
     min-width: 50vw;
   }
 
-  .scrollHalf__grupo__contenido {
+  .scrollHalf__group__content {
     margin: 0 1vw 0 31vw;
+    padding-top: 5vw;
   }
 }
 
